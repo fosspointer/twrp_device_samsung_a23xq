@@ -106,7 +106,7 @@ TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 TW_USE_SAMSUNG_HAPTICS := true
-TWHAVE_SELINUX := false
+TW_HAVE_SELINUX := false
 
 # Additional Configuration
 TW_HAS_DOWNLOAD_MODE := true
