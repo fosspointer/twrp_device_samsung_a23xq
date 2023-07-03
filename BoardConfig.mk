@@ -133,3 +133,9 @@ TW_NO_SCREEN_TIMEOUT := true
 # Include and use logcat
 TWRP_INCLUDE_LOGCAT := true
 TWRP_EVENT_LOGGING := true
+
+# CPU Temp doesn't work so remove it
+TW_NO_CPU_TEMP := true
+
+# Prevent flickering (maybe?)
+TW_SCREEN_BLANK_ON_BOOT := true
