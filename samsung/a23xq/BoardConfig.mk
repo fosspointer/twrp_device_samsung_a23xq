@@ -100,9 +100,9 @@ VENDOR_SECURITY_PATCH := 2099-12-31
 PLATFORM_VERSION := 16.1.0
 
 # TWRP Configuration
-TW_THEME := portrait_hdpi
-TW_EXTRA_LANGUAGES := true
-TW_SCREEN_BLANK_ON_BOOT := true
+TW_THEME := portrait_hdpi # Optional
+TW_EXTRA_LANGUAGES := true # Optional
+TW_SCREEN_BLANK_ON_BOOT := false
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 TW_USE_SAMSUNG_HAPTICS := true
@@ -111,7 +111,10 @@ TW_HAVE_SELINUX := false
 # Additional Configuration
 TW_HAS_DOWNLOAD_MODE := true
 
+# Self explanatory
 TW_INCLUDE_NTFS_3G := true
+
+# Adapt for visibility
 TW_Y_OFFSET := 70
 TW_H_OFFSET := -70
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
@@ -122,11 +125,14 @@ TW_EXCLUDE_SUPERSU := true
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 
 BOARD_HAS_NO_REAL_SDCARD := true
-TW_USE_TOOLBOX := true
+TW_USE_TOOLBOX := true # Optional
 TW_EXCLUDE_SUPERSU := true
 TW_EXCLUDE_MTP := true
-TW_OEM_BUILD := true
+TW_OEM_BUILD := true 
 
-# Logging
+# No timeout - useful for debugging
+TW_NO_SCREEN_TIMEOUT := true
+
+# Include and use logcat
 TWRP_INCLUDE_LOGCAT := true
 TWRP_EVENT_LOGGING := true
