@@ -126,3 +126,7 @@ TW_USE_TOOLBOX := true
 TW_EXCLUDE_SUPERSU := true
 TW_EXCLUDE_MTP := true
 TW_OEM_BUILD := true
+
+# Logging
+TWRP_INCLUDE_LOGCAT := true
+TWRP_EVENT_LOGGING := true
