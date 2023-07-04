@@ -1,0 +1,2 @@
+/vendor/lib/modules/sec_tsp_log.ko:
+/vendor/lib/modules/novatek_ts_nt36523.ko: /vendor/lib/modules/sec_cmd.ko /vendor/lib/modules/sec_secure_touch.ko /vendor/lib/modules/sec_common_fn.ko /vendor/lib/modules/sec_tsp_log.ko

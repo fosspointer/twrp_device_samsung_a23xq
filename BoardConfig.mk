@@ -105,7 +105,6 @@ PLATFORM_VERSION := 16.1.0
 # TWRP Configuration
 TW_THEME := portrait_hdpi # Optional
 TW_EXTRA_LANGUAGES := true # Optional
-TW_SCREEN_BLANK_ON_BOOT := false
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 TW_USE_SAMSUNG_HAPTICS := true
@@ -139,5 +138,7 @@ TARGET_USES_LOGD := true
 TW_NO_CPU_TEMP := true
 
 # Prevent flickering (maybe?)
-# TW_SCREEN_BLANK_ON_BOOT := true
-TW_SCREEN_BLANK_ON_BOOT := false
+TW_SCREEN_BLANK_ON_BOOT := true
+
+# Touch modules (hopefully works)
+TW_LOAD_VENDOR_MODULES := "novatek_ts_nt36523.ko"
