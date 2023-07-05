@@ -1,3 +1,0 @@
-add_lunch_combo twrp_a23xq-user
-add_lunch_combo twrp_a23xq-userdebug
-add_lunch_combo twrp_a23xq-eng

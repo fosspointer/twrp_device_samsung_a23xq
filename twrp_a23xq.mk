@@ -4,27 +4,25 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/embedded.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-
-# Enable project quotas and casefolding for emulated storage without sdcardfs
-$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
-
-# Inherit common TWRP stuff.
-$(call inherit-product, vendor/twrp/config/common.mk)
-
-# Inherit from device.mk
-$(call inherit-product, device/samsung/a23xq/device.mk)
-
 PRODUCT_DEVICE := a23xq
 PRODUCT_NAME := twrp_a23xq
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-A236B
 PRODUCT_MANUFACTURER := samsung
-PRODUCT_RELEASE_NAME := undefinedpp
+DEVICE_PATH := device/$(PRODUCT_BRAND)/$(PRODUCT_DEVICE)
+
+$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+
+# # Enable project quotas and casefolding for emulated storage without sdcardfs
+# $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+
+# Inherit common TWRP stuff.
+$(call inherit-product, vendor/twrp/config/common.mk)
+
+# Inherit from device.mk
+$(call inherit-product, $(DEVICE_PATH)/device.mk)
 
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 

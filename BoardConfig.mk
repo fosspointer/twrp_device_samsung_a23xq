@@ -34,7 +34,6 @@ TARGET_SCREEN_DENSITY := 450
 # Kernel
 BOARD_BOOTIMG_HEADER_VERSION := 2
 BOARD_KERNEL_BASE := 0x00000000
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=4e00000.dwc3 swiotlb=0 firmware_class.path=/vendor/firmware_mnt/image loop.max_part=7 cgroup.memory=nokmem,nosocket iptable_raw.raw_before_defrag=1 ip6table_raw.raw_before_defrag=1 console=null
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_RAMDISK_OFFSET := 0x02000000
 BOARD_KERNEL_TAGS_OFFSET := 0x01e00000
@@ -46,6 +45,7 @@ BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_CONFIG := a23xq_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/a23xq
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=4e00000.dwc3 swiotlb=0 firmware_class.path=/vendor/firmware_mnt/image loop.max_part=7 cgroup.memory=nokmem,nosocket iptable_raw.raw_before_defrag=1 ip6table_raw.raw_before_defrag=1 console=null
 
 # Kernel - prebuilt
 TARGET_FORCE_PREBUILT_KERNEL := true
@@ -105,7 +105,8 @@ PLATFORM_VERSION := 16.1.0
 # TWRP Configuration
 TW_THEME := portrait_hdpi # Optional
 TW_EXTRA_LANGUAGES := true # Optional
-TW_INPUT_BLACKLIST := "hbtp_vm"
+# TW_INPUT_BLACKLIST := "hbtp_vm"
+TW_INPUT_BLACKLIST := ""
 TW_USE_TOOLBOX := true
 TW_USE_SAMSUNG_HAPTICS := true
 TW_HAVE_SELINUX := false
@@ -124,10 +125,11 @@ TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 
 BOARD_HAS_NO_REAL_SDCARD := true
 TW_USE_TOOLBOX := true # Optional
-TW_EXCLUDE_MTP := true
+TW_EXCLUDE_MTP := true;
 
 # No timeout - useful for debugging
-TW_NO_SCREEN_TIMEOUT := true
+# TW_NO_SCREEN_TIMEOUT := true
+TW_NO_SCREEN_TIMEOUT := false
 
 # Include and use logcat
 TWRP_INCLUDE_LOGCAT := true
@@ -137,8 +139,19 @@ TARGET_USES_LOGD := true
 # CPU Temp doesn't work so remove it
 TW_NO_CPU_TEMP := true
 
-# Prevent flickering (maybe?)
 TW_SCREEN_BLANK_ON_BOOT := true
+TW_NO_SCREEN_BLANK := true
 
 # Touch modules (hopefully works)
-TW_LOAD_VENDOR_MODULES := "novatek_ts_nt36523.ko"
+TW_LOAD_VENDOR_MODULES := "5.4-gki/novatek_ts_nt36523.ko novatek_ts_nt36523.ko"
+
+TARGET_RECOVERY_DEVICE_MODULES += \
+    libdisplayconfig.qti \
+    vendor.display.config@1.0 \
+    vendor.display.config@2.0 \
+    libdisplayconfig.qti
+
+RECOVERY_LIBRARY_SOURCE_FILES += \
+    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/libdisplayconfig.qti.so \
+    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@1.0.so \
+    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@2.0.so

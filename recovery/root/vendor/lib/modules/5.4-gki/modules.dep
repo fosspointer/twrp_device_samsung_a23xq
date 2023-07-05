@@ -1,0 +1,18 @@
+/vendor/lib/modules/5.4-gki/sec_input_notifier.ko:
+/vendor/lib/modules/5.4-gki/xhci-hcd.ko:
+/vendor/lib/modules/5.4-gki/lcd.ko:
+/vendor/lib/modules/5.4-gki/v4l2-mem2mem.ko:
+/vendor/lib/modules/5.4-gki/msm_dma_iommu_mapping.ko:
+/vendor/lib/modules/5.4-gki/spmi-pmic-arb.ko:
+/vendor/lib/modules/5.4-gki/pdic_notifier_module.ko:
+/vendor/lib/modules/5.4-gki/vbus_notifier.ko:
+/vendor/lib/modules/5.4-gki/common_muic.ko:
+/vendor/lib/modules/5.4-gki/sec_tsp_log.ko:
+/vendor/lib/modules/5.4-gki/qsee_ipc_irq.ko:
+/vendor/lib/modules/5.4-gki/qcom_pm8008-regulator.ko:
+/vendor/lib/modules/5.4-gki/msm_drm.ko: /vendor/lib/modules/5.4-gki/sec_input_notifier.ko /vendor/lib/modules/5.4-gki/lcd.ko /vendor/lib/modules/5.4-gki/v4l2-mem2mem.ko /vendor/lib/modules/5.4-gki/msm_dma_iommu_mapping.ko /vendor/lib/modules/5.4-gki/spmi-pmic-arb.ko
+/vendor/lib/modules/5.4-gki/usb_typec_manager.ko: /vendor/lib/modules/5.4-gki/common_muic.ko /vendor/lib/modules/5.4-gki/vbus_notifier.ko /vendor/lib/modules/5.4-gki/pdic_notifier_module.ko
+/vendor/lib/modules/5.4-gki/sec_cmd.ko: /vendor/lib/modules/5.4-gki/sec_tsp_log.ko
+/vendor/lib/modules/5.4-gki/xhci-plat-hcd.ko: /vendor/lib/modules/5.4-gki/xhci-hcd.ko
+/vendor/lib/modules/5.4-gki/sec_common_fn.ko: /vendor/lib/modules/5.4-gki/usb_typec_manager.ko /vendor/lib/modules/5.4-gki/common_muic.ko /vendor/lib/modules/5.4-gki/vbus_notifier.ko /vendor/lib/modules/5.4-gki/pdic_notifier_module.ko /vendor/lib/modules/5.4-gki/sec_tsp_log.ko /vendor/lib/modules/5.4-gki/msm_drm.ko /vendor/lib/modules/5.4-gki/sec_input_notifier.ko /vendor/lib/modules/5.4-gki/lcd.ko /vendor/lib/modules/5.4-gki/v4l2-mem2mem.ko /vendor/lib/modules/5.4-gki/msm_dma_iommu_mapping.ko /vendor/lib/modules/5.4-gki/spmi-pmic-arb.ko
+/vendor/lib/modules/5.4-gki/novatek_ts_nt36523.ko: /vendor/lib/modules/5.4-gki/sec_cmd.ko /vendor/lib/modules/5.4-gki/sec_common_fn.ko /vendor/lib/modules/5.4-gki/usb_typec_manager.ko /vendor/lib/modules/5.4-gki/common_muic.ko /vendor/lib/modules/5.4-gki/vbus_notifier.ko /vendor/lib/modules/5.4-gki/pdic_notifier_module.ko /vendor/lib/modules/5.4-gki/sec_tsp_log.ko /vendor/lib/modules/5.4-gki/msm_drm.ko /vendor/lib/modules/5.4-gki/sec_input_notifier.ko /vendor/lib/modules/5.4-gki/lcd.ko /vendor/lib/modules/5.4-gki/v4l2-mem2mem.ko /vendor/lib/modules/5.4-gki/msm_dma_iommu_mapping.ko /vendor/lib/modules/5.4-gki/spmi-pmic-arb.ko
