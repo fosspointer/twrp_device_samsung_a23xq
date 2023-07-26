@@ -141,17 +141,3 @@ TW_NO_CPU_TEMP := true
 
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_NO_SCREEN_BLANK := true
-
-# Touch modules (hopefully works)
-TW_LOAD_VENDOR_MODULES := "5.4-gki/novatek_ts_nt36523.ko novatek_ts_nt36523.ko"
-
-TARGET_RECOVERY_DEVICE_MODULES += \
-    libdisplayconfig.qti \
-    vendor.display.config@1.0 \
-    vendor.display.config@2.0 \
-    libdisplayconfig.qti
-
-RECOVERY_LIBRARY_SOURCE_FILES += \
-    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/libdisplayconfig.qti.so \
-    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@1.0.so \
-    $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@2.0.so
